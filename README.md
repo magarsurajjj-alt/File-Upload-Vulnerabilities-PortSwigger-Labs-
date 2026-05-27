@@ -23,11 +23,6 @@ file-upload-vulnerabilities/
 │
 ├── expert/
 │   └── race-condition-upload/
-│
-└── techniques/
-    ├── bypass-cheatsheet.md
-    ├── web-shells.md
-    └── detection-evasion.md
 ```
 ### 🟢 Apprentice
 - Remote code execution via web shell upload  
