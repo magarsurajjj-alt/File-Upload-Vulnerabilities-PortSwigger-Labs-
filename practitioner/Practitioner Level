@@ -1,0 +1,67 @@
+3. Path traversal in file upload
+
+👉 Meaning:
+Uploaded file name is not properly sanitized.
+
+👉 Example exploit:
+
+../shell.php
+
+👉 What happens:
+File is stored in a different directory (maybe web root)
+
+👉 Result:
+✔ You place web shell where server executes it
+
+4. Extension blacklist bypass
+
+👉 Meaning:
+Server blocks dangerous extensions like:
+
+.php
+.jsp
+
+👉 But blacklist is weak.
+
+👉 What you did:
+Used bypass like:
+
+.phtml
+.php5
+.php.jpg
+
+👉 Result:
+✔ Server still executes file
+
+5. Obfuscated file extension bypass
+
+👉 Meaning:
+Server tries to detect extension but not properly.
+
+👉 Tricks:
+
+shell.php%00.jpg
+shell.PHP
+double encoding
+
+👉 Result:
+✔ Filter confused → file executed
+
+6. Polyglot web shell upload
+
+👉 Meaning:
+A file that is BOTH:
+
+valid image
+valid PHP code
+
+👉 Example idea:
+
+Image header + PHP code combined
+
+👉 Why it works:
+Server thinks it's image
+But interpreter runs PHP inside it
+
+👉 Result:
+✔ Highly advanced bypass → RCEs
