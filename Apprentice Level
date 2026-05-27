@@ -1,0 +1,33 @@
+1. Remote code execution via web shell upload
+
+👉 Meaning:
+The server directly allows uploading a script file.
+
+👉 What you did:
+
+Uploaded a PHP web shell like:
+
+<?php system($_GET['cmd']); ?>
+Accessed it via browser
+Got command execution
+
+👉 Result:
+✔ Full command execution on server
+
+2. Content-Type restriction bypass
+
+👉 Meaning:
+Server checks file type using HTTP header:
+
+Content-Type: image/jpeg
+
+👉 Problem:
+Server trusts this header (which attacker can fake)
+
+👉 What you did:
+
+Sent PHP file but changed header to image/jpeg
+Server accepted it
+
+👉 Result:
+✔ Malicious file uploaded → RCE
