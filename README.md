@@ -6,6 +6,7 @@ This project documents my hands-on learning of file upload vulnerabilities using
 The goal was to understand how insecure file upload mechanisms can lead to **remote code execution (RCE)** through different bypass techniques.
 
 ## Structure
+```
 file-upload-vulnerabilities/
 │
 ├── README.md
@@ -27,7 +28,7 @@ file-upload-vulnerabilities/
     ├── bypass-cheatsheet.md
     ├── web-shells.md
     └── detection-evasion.md
-
+```
 ### 🟢 Apprentice
 - Remote code execution via web shell upload  
 - Content-Type restriction bypass  
