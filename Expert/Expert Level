@@ -1,0 +1,19 @@
+7. Race condition file upload
+
+👉 Meaning:
+Server processes file in 2 steps:
+
+Upload check (security validation)
+Save file
+
+👉 Problem:
+There is a time gap between these steps
+
+👉 Attack:
+
+Upload valid file first
+Quickly access or replace it before validation completes
+
+👉 Result:
+✔ Bypass security checks completely
+✔ Upload malicious file unnoticed
